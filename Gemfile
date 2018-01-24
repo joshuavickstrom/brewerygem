@@ -4,4 +4,6 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # Specify your gem's dependencies in brewery.gemspec
 gemspec
-gem 'pry'
+#gem 'pry'
+#gem 'rest-client'
+#gem 'json'

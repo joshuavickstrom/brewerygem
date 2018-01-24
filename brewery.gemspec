@@ -10,8 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["'joshuavickstrom@outlook.com'"]
 
   spec.summary       = %q{Brewery Gem for Learn.co Project.}
-  spec.homepage      = "http/learn.co"
-  spec.license       = "MIT"
+
 
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
@@ -26,5 +25,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "pry"
   spec.add_development_dependency "json"
-  spec.add_development_dependency "RestClient"
+  spec.add_development_dependency "rest-client"
 end
