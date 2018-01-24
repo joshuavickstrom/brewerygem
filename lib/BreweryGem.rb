@@ -1,6 +1,6 @@
-require "brewery/version"
 
-module Brewery
+
+module BreweryGem
 
 end
 

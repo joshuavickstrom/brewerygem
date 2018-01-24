@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-
-require_relative '../lib/brewery'
-
-Brewery::CLI.new.start
