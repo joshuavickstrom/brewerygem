@@ -1,8 +1,12 @@
 require "brewery/version"
 
 module Brewery
-  # Your code goes here...
+
 end
+
+require 'rest-client'
+require 'json'
+require 'pry'
 
 require_relative "./brewery/api"
 require_relative "./brewery/cli"

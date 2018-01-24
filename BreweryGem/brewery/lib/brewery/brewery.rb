@@ -1,0 +1,3 @@
+class BreweryGem::Brewery
+
+end
