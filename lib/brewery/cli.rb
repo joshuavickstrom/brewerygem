@@ -1,9 +1,10 @@
 class BreweryGem::CLI
+
   def start
     puts "Welcome to the BreweryGem! Please provide the state you'd like to explore."
     input = gets.strip
 
-    # call API
+    BreweryGem::API.new.list_breweries(input)
 
     # puts name/locality of all breweries in numbered list
 
