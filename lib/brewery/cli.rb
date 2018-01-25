@@ -5,15 +5,19 @@ class BreweryGem::CLI
     input = gets.strip
 
     BreweryGem::API.list_breweries(input)
+    binding.pry
+    puts ""
+    puts "Want more information about a brewery you saw? Enter the name below:"
+    input = gets.strip
 
-    # puts name/locality of all breweries in numbered list
+    binding.pry
 
-    # get user input to provide more details
 
-    #clear #all before receiving new requests
+    self.clear #clear #all before receiving new requests
 
     # ask for more options
 
     # or exit
   end
+
 end

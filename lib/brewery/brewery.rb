@@ -1,12 +1,11 @@
 class BreweryGem::Brewery
 
-  attr_accessor :name, :region, :locality, :website
+  attr_accessor :name, :address, :website
   @@all = []
 
-  def initialize(region=nil)
+  def initialize(name,address,website)
     @name = name
-    @region = region
-    @locality = locality
+    @address = address
     @website = website
     @@all << self
   end
