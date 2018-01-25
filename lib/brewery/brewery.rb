@@ -1,6 +1,8 @@
 class BreweryGem::Brewery
+
   attr_accessor :name, :region, :locality, :website
   @@all = []
+
   def initialize(region=nil)
     @name = name
     @region = region
@@ -13,15 +15,8 @@ class BreweryGem::Brewery
     @@all
   end
 
-  def self.find(input)
-    if breweries.include?(input)
-      binding.pry
-      self.list_breweries(input)
-    elsif
-      puts "Please provide a US state to receive local breweries to continue or enter Y to stop."
-    else input == "Y"
-      puts "Thank you. Exiting program..."
-      exit
-    end
+  def self.clear
+    @@all.clear
   end
+
 end
