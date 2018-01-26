@@ -1,4 +1,4 @@
-require 'pp'
+
 class BreweryGem::Brewery
 
   attr_accessor :name, :address, :website
@@ -17,12 +17,6 @@ class BreweryGem::Brewery
 
   def self.clear
     @@all.clear
-  end
-
-  def self.find_by_name(input)
-    @@all.include?(input)
-      puts "Input valid. Loading brewery information..."
-      pp BreweryGem::Brewery.new(@name, @address, @website)
   end
 
 end
