@@ -1,4 +1,4 @@
-require 'pp'
+
 class BreweryGem::API
 
   def self.list_breweries(input)

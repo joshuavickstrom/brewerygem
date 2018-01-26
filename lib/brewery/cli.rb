@@ -8,7 +8,7 @@ class BreweryGem::CLI
     puts ""
     puts "Would you like to explore a new region? Type Y or N"
     input = gets.strip
-    if input == "Y"
+    if input.upcase == "Y"
       BreweryGem::Brewery.clear
       start
     else
@@ -38,7 +38,7 @@ class BreweryGem::CLI
     puts "Address: #{b.address}"
     puts b.website ? "Website: #{b.website}" : "Website: n/a"
     puts " "
-    puts "*************************************************"
+    puts "*************************************"
     puts " "
   end
 
