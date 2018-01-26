@@ -20,7 +20,9 @@ class BreweryGem::Brewery
   end
 
   def self.find_by_name(input)
-
+    @@all.include?(input)
+      puts "Input valid. Loading brewery information..."
+      pp BreweryGem::Brewery.new(@name, @address, @website)
   end
 
 end
