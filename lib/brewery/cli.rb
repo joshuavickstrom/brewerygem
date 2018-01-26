@@ -1,3 +1,4 @@
+require 'pp'
 class BreweryGem::CLI
 
   def start
@@ -5,19 +6,24 @@ class BreweryGem::CLI
     input = gets.strip
 
     BreweryGem::API.list_breweries(input)
-    binding.pry
+
     puts ""
-    puts "Want more information about a brewery you saw? Enter the name below:"
+    puts "Want information about a brewery you saw? Enter the name below:"
     input = gets.strip
 
-    binding.pry
+    BreweryGem::Brewery.find_by_name(input)
 
+    puts ""
+    puts "Would you like to explore a new region? Type Y or N"
+    input = gets.strip
+    if input == "Y"
+      BreweryGem::Brewery.clear
+      start
+    else
+      puts "Thank you. Program closed."
+      exit
+    end
 
-    self.clear #clear #all before receiving new requests
-
-    # ask for more options
-
-    # or exit
   end
 
 end

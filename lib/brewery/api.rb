@@ -1,3 +1,4 @@
+require 'pp'
 class BreweryGem::API
 
   def self.list_breweries(input)
@@ -7,7 +8,7 @@ class BreweryGem::API
       name = region["brewery"]["name"]
       address = "#{region["streetAddress"]}, #{region["locality"]}, #{region["region"]} #{region["postalCode"]}"
       website = region["brewery"]["website"]
-      BreweryGem::Brewery.new(name, address, website)
+      pp BreweryGem::Brewery.new(name, address, website)
     end
   end
 end

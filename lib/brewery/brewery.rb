@@ -1,3 +1,4 @@
+require 'pp'
 class BreweryGem::Brewery
 
   attr_accessor :name, :address, :website
@@ -16,6 +17,10 @@ class BreweryGem::Brewery
 
   def self.clear
     @@all.clear
+  end
+
+  def self.find_by_name(input)
+
   end
 
 end
