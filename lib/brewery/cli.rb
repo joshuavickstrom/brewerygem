@@ -18,10 +18,10 @@ class BreweryGem::CLI
 
   end
 
-  def list_breweries
+  def list_breweries(limit=10)
     if !BreweryGem::Brewery.all.empty?
-      BreweryGem::Brewery.all.each.with_index(1) do |b, i|
-        puts "#{i}. #{b.name}"
+      BreweryGem::Brewery.all.first(limit).each.with_index(1) do |brewery, index|
+          puts "#{index}. #{brewery.name}"
       end
     else
       puts "Unfortunately, the region you provided is dry... Try another one?"
@@ -54,10 +54,8 @@ class BreweryGem::CLI
   def region_menu
     puts "Welcome to the BreweryGem! Please provide the state you'd like to explore."
     input = gets.strip
-
-    BreweryGem::API.list_breweries(input)
-
-    list_breweries
+      BreweryGem::API.list_breweries(input)
+      list_breweries
   end
 
   def details_menu
@@ -67,8 +65,10 @@ class BreweryGem::CLI
     if input_valid?(input)
       brewery_details(input)
     else
-      list_breweries
+      puts " "
       puts "**** Invalid request. Try again. ****"
+      puts "Please choose a brewery from the list."
+      list_breweries
       details_menu
     end
   end
